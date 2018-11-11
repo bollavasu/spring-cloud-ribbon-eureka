@@ -1,0 +1,14 @@
+
+https://howtodoinjava.com/spring-cloud/spring-boot-ribbon-eureka/
+
+start the ribbon-eureka-server
+http://localhost:8761/
+
+start the ribbon-server with 3 different ports (9090, 9091, 9092)
+java -jar -Dserver.port=9090 target/ribbon-server-0.0.1-SNAPSHOT.jar
+java -jar -Dserver.port=9091 target/ribbon-server-0.0.1-SNAPSHOT.jar
+java -jar -Dserver.port=9092 target/ribbon-server-0.0.1-SNAPSHOT.jar
+
+start the ribbon-client 
+http://localhost:8888/client/frontend
+each request will go to the different server (9090, 9091, 9092)
